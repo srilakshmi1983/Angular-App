@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  allowUserInput = 'Provide your name!';
 
   constructor() { 
     setTimeout (() => {
@@ -17,4 +19,11 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCreateServer(){
+    this.serverCreationStatus = 'Server was created'
+  }
+
+  onUserInput(){
+    this.allowUserInput = 'Input accepted and processed'
+  }
 }
